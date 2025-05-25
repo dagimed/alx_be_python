@@ -7,7 +7,8 @@ expenses = float(input("Enter your total monthly expenses: "))
 monthly_savings = income - expenses
 
 # Calculate projected annual savings with 5% interest
-projected_savings = monthly_savings * 12 * 1.05
+annual_savings = monthly_savings * 12
+projected_savings = annual_savings + (annual_savings * 0.05)
 
 # Output results
 print(f"Your monthly savings are ${monthly_savings:.0f}.")
