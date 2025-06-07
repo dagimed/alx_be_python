@@ -11,18 +11,17 @@ def main():
         display_menu()
         choice = input("Enter your choice: ").strip()
 
-        # Validate that the input is a number
         try:
-            choice = int(choice)  # Convert input to integer
-            if choice not in [1, 2, 3, 4]:  # Check if choice is valid
+            choice = int(choice)
+            if choice not in [1, 2, 3, 4]:
                 print("Invalid choice. Please enter a number between 1 and 4.")
                 continue
         except ValueError:
             print("Invalid input. Please enter a number.")
             continue
 
-        if choice == 1:  # Use integer comparison
-            item = input("Enter item to add: ").strip()
+        if choice == 1:
+            item = input("Enter the item to add: ").strip()  # Updated prompt
             if item:
                 shopping_list.append(item)
                 print(f"{item} added to the shopping list.")
